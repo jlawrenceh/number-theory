@@ -71,8 +71,33 @@ def BasicProperties():
         print()
         option = int(input("Choose again or EXIT: "))
     
-    print(menu())
+    menu()
 
+    
+def well_ordered_property():
+    print("INSTRUCTION", end='\n')
+    print("Please input any non-numeric character to finish the function.", end='\n\n')
+    ans_list = []
+    while True:
+        elem = (input("Please input element(s): "))
+        if elem == '0':
+            print("Natural number(s) cannot be zero.")
+            break
+        if elem == "" and not ans_list:
+            print("Well Ordering Property Elements cannot be empty.", end="\n")
+            break
+        elif not elem.isdigit():
+            break
+        ans_list.append(int(elem))
+
+    if not ans_list: # if list is empty
+        pass
+    else:
+        print("\n")
+        print("Smallest element in the set is: ", min(ans_list))
+        print(ans_list)
+
+        
 def menu():
     print("=================================")
     print("               MENU")
