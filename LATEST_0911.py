@@ -172,6 +172,32 @@ def SuccessorOp(m,n):
         return SuccessorOp(m+1, n-1)
     else:
         return m
+    
+    menu()
+
+def well_ordered_property():
+    print("INSTRUCTION", end='\n')
+    print("Please input any non-numeric character to finish the function.", end='\n\n')
+    ans_list = []
+    while True:
+        elem = (input("Please input element(s): "))
+        if elem == '0':
+            print("Natural number(s) cannot be zero.")
+            break
+        if elem == "" and not ans_list:
+            print("Well Ordering Property Elements cannot be empty.", end="\n")
+            break
+        elif not elem.isdigit():
+            break
+        ans_list.append(int(elem))
+
+    if not ans_list: # if list is empty
+        pass
+    else:
+        print("\n")
+        print("Smallest element in the set is: ", min(ans_list))
+        print(ans_list)
+
 
 def menu():
     print("=================================")
@@ -204,10 +230,12 @@ while choice != 4:
         print("=================================")
         print("   The Well Ordering Property")
         print("=================================")
+        well_ordered_property()
     else:
         print("Invalid choice. Try again.")
     
     print()
-    choice = int(input("Enter choice: "))
+    menu()
+    choice = int(input("Try Again or Exit? Enter choice: "))
     
-print("Thank you.")
+print("THANK YOU.")
