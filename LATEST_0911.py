@@ -73,6 +73,16 @@ def BasicProperties():
     
     print(menu())
 
+def SuccessorOp(m,n):
+    print(f"= {m} + {n}")
+
+    if n > 0:
+        print(f"= {m} + S({n-1})")
+        print(f"= S({m}) + {n-1}")
+        return SuccessorOp(m+1, n-1)
+    else:
+        return m
+
 def menu():
     print("=================================")
     print("               MENU")
@@ -81,8 +91,8 @@ def menu():
     print("[2] The Successor Operation")
     print("[3] The Well Ordering Property")
     print("[4] Exit")
-    
-    
+
+
 menu()
 choice = int(input("Enter choice: "))
 
@@ -96,6 +106,10 @@ while choice != 4:
         print("=================================")
         print("       Successor Operation")
         print("=================================")
+        m = int(input("Enter the value of m: "))
+        n = int(input("Enter the value of n: "))
+        ans = SuccessorOp(m,n)
+        print(f"= {ans}")
     elif choice == 3:
         print("=================================")
         print("   The Well Ordering Property")
