@@ -15,6 +15,18 @@ def ClosurePropertyAdd():
     x = int(input("Enter x: "))
     y = int(input("Enter y: "))
     print(x, ' + ', y, ' is an element of Natural Numbers' )
+
+def ClosurePropertyMulti():
+    print("===================================")
+    print("   CLOSURE PROPERTY MULTIPLICATION")
+    print("===================================")
+    
+    print("Natural multiplication is closed.")
+    print("Formula: x * y is an element of Natural Numbers")
+    
+    x = int(input("Enter x: "))
+    y = int(input("Enter y: "))
+    print(x, ' * ', y, ' is an element of Natural Numbers' )
     
 def AssociativePropertyAdd():
     print("=================================")
@@ -29,6 +41,20 @@ def AssociativePropertyAdd():
     z = int(input("Enter z: "))
     print(x, ' + (', y, '+ ', z, ') = (' , x, " + ", y, ") + ", z)
 
+def AssociativePropertyMulti():
+    print("=====================================")
+    print(" ASSOCIATIVE PROPERTY MULTIPLICATION")
+    print("=====================================")
+    
+    print("Natural number multiplication is associative.")
+    print("Formula: (x * y) * z = x * (y * z)")
+    
+    x = int(input("Enter x: "))
+    y = int(input("Enter y: "))
+    z = int(input("Enter z: "))
+    print('(', x, '*', y, ') *', z, '=', x, '* (', y, '*', z, ')')
+
+
 def CommutativePropertyAdd():
     print("=================================")
     print(" COMMUTATIVE PROPERTY ADDITION")
@@ -40,6 +66,56 @@ def CommutativePropertyAdd():
     m = int(input("Enter m: "))
     n = int(input("Enter n: "))
     print(m , ' + ' , n , " = ", n, " + ", m)
+
+def CommutativePropertyMulti():
+    print("=====================================")
+    print(" COMMUTATIVE PROPERTY MULTIPLICATION")
+    print("=====================================")
+    
+    print("Natural number multiplication is commutative.")
+    print("Formula: x * y = y * x")
+    
+    x = int(input("Enter x: "))
+    y = int(input("Enter y: "))
+    print(x , ' * ' , y , " = ", y, " * ", x)
+
+
+def IdentityPropertyAdd():
+    print("=================================")
+    print(" IDENTITY PROPERTY ADDITION")
+    print("=================================")
+    
+    print("Natural number addition is identity.")
+    print("Formula: m + 0 = m")
+    
+    m = int(input("Enter m: "))
+    print(m , ' + ' , 0 , " = ", m)
+
+def IdentityPropertyMulti():
+    print("==================================")
+    print(" IDENTITY PROPERTY MULTIPLICATION")
+    print("==================================")
+    
+    print("Natural number multiplication is identity.")
+    print("Formula: n * 1 = n = 1 * n")
+    
+    n = int(input("Enter n: "))
+    print(n, '*',1, '=', n, '=', 1, '*', n )
+
+
+def DistributiveProperty():
+    print("=================================")
+    print(" DISTRIBUTIVE PROPERTY")
+    print("=================================")
+    
+    print("Natural number multiplication distributes over addition.")
+    print("Formula: (x + y)* z = (x * z) + (y * z)")
+    
+    x = int(input("Enter x: "))
+    y = int(input("Enter y: "))
+    z = int(input("Enter z: "))
+    print('(', x, '+', y, ')*', z, '= (', x, '*', z, ') + (', y, '*', z, ')')
+
 
 def BasicProperties():
     print("[1] Infinite Numbers")
@@ -61,10 +137,24 @@ def BasicProperties():
             Infinite()
         elif option == 2:
             ClosurePropertyAdd()
+        elif option == 3:
+            ClosurePropertyMulti()
         elif option == 4:
             AssociativePropertyAdd()
+        elif option == 5:
+            AssociativePropertyMulti()
         elif option == 6:
             CommutativePropertyAdd()
+        elif option == 7:
+            CommutativePropertyMulti()
+        elif option == 8:
+            IdentityPropertyAdd()
+        elif option == 9:
+            IdentityPropertyMulti()
+        elif option == 10:
+            DistributiveProperty()
+
+
         else:
             print("No existing property. Please try again.")
         
